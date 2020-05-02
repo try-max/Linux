@@ -1,0 +1,62 @@
+组的基本介绍：在linux中的每个用户必须属于一个组，不能独立于组外。在linux中每个文件所有者，所在组，其他组的概念。
+文件：
+1.所有者			:谁创建的文件
+2.所在组
+3.其他组
+4.改变用户所在组
+
+
+查看文件的所有者：
+指令：ls -ahl
+应用实例：创建一个组police，再创建一个用户tom，然后使用tom来创建一个文件；
+	groupadd police
+	useradd -g police tom
+	passwd tom
+
+改变文件所有者：
+	chown 用户名  文件名
+
+案例
+	使用root创建一个apple.txt文件，然后将其
+	touch apple.txt
+	chown apple.txt tom
+
+组的创建：
+groupadd
+
+案例：
+	创建一个moster组
+	添加一个组fox，放到monster组中
+	  groupadd monster
+	  useradd -g monster fox
+
+文件目录所在组：
+某个用户创建一个文件后，默认这个文件的所在组就是该用户所在的组
+
+查看文件/目录所在组
+  ls -ahl
+修改文件所在组：
+  chgrp 组名 文件名
+
+案例：
+	使用root创建文件orange.txt,查看文件属于那个组，然后将这个文件所在组，修改到police组
+	chgrp police orange.txt
+除文件的所有者和所在组外，系统的其他用户都是文件的其他组
+
+改变文件用户所在组：
+	在添加用户时，可以指定将该用户添加到那个组中，同样的用root的管理权限可以改变某个用户所在的组。
+
+改变用户所在组；
+1）usermod -g 组名       用户名
+2）usermod -d 目录名   用户名        改变该用户登录的初始目录
+
+应用实例：
+创建一个土匪（bandit）将tom 这个用户从原来所在的police组，修改到bandit组；
+	id tom
+
+	groupadd bandit
+	usermod -g bandit tom  //将tom组移动到bandit组
+
+	it tom
+
+	

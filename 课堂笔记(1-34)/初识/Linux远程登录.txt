@@ -1,0 +1,5 @@
+Linux不在自己电脑上的。
+
+XShell5      { 远程登录Linux的软件}    
+
+mysql 安装文件------（xftp5）----》linux    ：远程的文件上传和下载

@@ -1,0 +1,19 @@
+关机重启命令：
+shutdown
+ 1.shutdown -h now:表示立即关机
+ 2.shutdown -h 1:     表示1分钟后关机
+ 3.shutdown -r now: 表示立即重启
+
+halt
+ 1.直接使用效果等价于关机
+
+reboot
+ 1.重启
+
+syn
+ 1.把内存的数据同步到内存中
+sync，把内存的数据写入磁盘中，防止数据丢失。
+
+
+
+

@@ -1,0 +1,43 @@
+ls：列出当前目录得内容；
+ls -l：列出目录得内容更加详细：
+ls -a：显示当前目录所有文件，包括隐藏文件
+man ls ：查找帮助
+ls / ：查找根目录的内容
+
+
+cd：回到主目录
+cd  /：切换到/目录
+
+pwd：当前工作目录;
+
+mkdir:创建目录
+mkdir -p ch3/src:一次创建整个目录：副目录不存在，首先创建目录
+
+cp ：拷贝
+cp ch1/hello.c ch2/:拷贝谁，拷贝到哪里
+
+拷贝整个目录需要不停循环一个个拷贝文件
+
+剪切：mv
+
+mv ch2/hello.c ./     :从目录ch2下剪切hello.c到./根目录下
+
+重命名：mv
+mv hello.c helloworld.c:将hello重命名位helloworld
+
+删除：rm
+
+rm helloworld.c       :删除hello world文件
+
+rm -r ch1       ：删除目录
+
+查看：cat
+cat ch2/hello.c   :查看一个文件
+
+切换用户：su
+su root      ：切换到root用户
+
+su - newsoft:联通环境变量一起切换
+
+
+

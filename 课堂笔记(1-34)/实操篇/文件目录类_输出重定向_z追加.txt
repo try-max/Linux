@@ -1,0 +1,83 @@
+>:输出重定向   会将原来的文件的内容覆盖
+基本语法：
+    ls -l >文件      例子： ls -l > a.txt                   将ls -l 命令执行后显示的目录文件记录覆盖写入到 a.txt文件中，
+                                                                       如果a.txt文件没有则创建
+
+    ls -al >>文件    例子：ls -al >>a.txt               将ls-al命令执行后显示的目录文件记录追加到 a.txt文件的尾部中，
+                                                                        如果a.txt文件没有则创建
+    cat 文件 1>文件 2                                         
+    echo "内容" >>文件
+
+ls -l /home/ > /home/info.txt       将/home目录下的文件列表写入到/home/info.txt中
+cal >> /home/mycal	       将当前日历信息，追加到/home/mycal文件中
+
+
+>>:追加     不会覆盖原来文件的内容，而是追加到文件的尾部
+
+
+echo 指令：输出内容到控制台
+
+案例
+ 1..echo输出PATH(路径)内容        echo $PATH 
+
+ 2.echo输出hello内容           echo "hello"
+
+head指令：用于显示文件的开头部分；
+head -n 5 文件          ：用于查看文件的前五行
+
+
+
+
+
+tail指令  用于输出文件的尾部的内容
+语法：
+      1.tail文件                   查看文件后10行内容
+      2.tail -n 5 文件          查看文件后5行内容
+      3.tail -f 文件              实时追踪该文档的所有跟新，工作经常使用
+       
+案例：
+1.查看/etc/profile最后的5行代码
+        tail -n 5 /etc/profile
+2.实时监控该mydate.txt 的所有跟新
+ tail -f mydate.txt
+
+
+
+ln 指令：软连接或者符号链接，（类似Windows的快捷方式）
+
+
+ln -s [源文件] [链接名]
+
+案例：1.在/home 目录下创建一个软连接 linkToRoot，连接到/root目录
+ ln -s /root linkToRoot         /root: 原文件
+           2.删除软连接
+rm -rf linkToRoot
+
+
+history指令：查看已经执行过历史命令，也可以执行历史指令；
+语法：history 
+
+案例：
+1.显示所有的历史命令
+history
+2.显示10个历史命令
+history 10
+3.显示历史指令为5的命令
+！5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

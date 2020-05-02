@@ -1,0 +1,39 @@
+1.find指令
+语法：
+	find [搜索范围] [选项]
+选项：
+	-name<>
+	-user<>
+	-size<>
+
+案例：
+ 1.1按文件名，根据名称查找/home目录下的hello.txt文件
+	find /home -name hello.txt
+1.2按照文件的拥有者查找，在/opt目录下，用户名称为nobody的文件
+	find /opt -user nobody
+ 1.3查找整个Linux系统下大于20m的文件（+n 大于 -n小于 n等于）
+	find / -size +20M                          /:根目录
+
+
+2.locate指令：可以实现快速定位文件路径。locate指令用事先建立的系统中所有的文件名称及路径。
+的locat数据库实现快速定位给定的文件。
+使用locate前使用updatedb
+
+
+locate hello.txt
+
+
+3.grep指令和管道指令：
+grep:过滤查找，管道符号,"|" ，表示将前一个命令的处理结果输出传递给后面的命令处理
+
+语法：
+	grep [选项] 查找内容
+	-n :显示匹配行及行号
+	-i  :忽略字母大小写
+案例：
+1 在hello.txt查找Yes所在的行号，并显示行号
+	cat hello.txt | grep yes
+
+	cat hello.txt | grep -n yes
+
+	cat hello.txt | grep -ni yes      -ni:不区分大小写

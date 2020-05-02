@@ -1,0 +1,57 @@
+gzip ：用于压缩文件
+案例：
+ gzip压缩，将/home下的hello.txt 文件进行压缩
+
+	gzip hello.txt     (对文件进行gzip hello.txt 压缩，原来的文件就会消失)
+
+
+gunzip：解压缩文件（将文件压缩为*.gz文件）
+
+案例：给hello.txt 文件解压缩
+	gunzip hello.txt.gz
+
+
+
+zip 压缩文件：
+
+语法：-r :递归压缩
+	zip [] XXX.zip
+案例：
+	1.将/home下的所有文件进行压缩成mypackage.zip
+		zip -r mypackage.zip /home/
+	2.将mypackge.zip 解压到/opt/tmp目录下
+		unzip -d /opt/tmp/ mypackage.zip
+
+unzip解压文件：
+
+语法：-d 解压指定文件
+	unzip [] XXX.zip
+
+
+
+tar 指令：打包指令；打包文件后的文件后缀是 .tar.gz的文件
+tar [] XXX.tar.gz 打包的内容
+
+语法：
+	-c    产生.tar打包文件
+	-v    显示详细信息
+	-f    指定压缩后的文件名
+	-z    打包同时压缩
+	-x     解压.tar文件
+
+
+案例：
+	1.压缩多个文件，将/home/a1.txt和home/a2.txt压缩成a.tar.gz
+	tar -zcvf a.tar.gz a1.txt a2.txt
+	2.将一个文件夹整体打包
+	tar -zcvf myhome.tar.gz /home/
+	3.经a.tar.gz解压到当前目录：
+	tar -zxvf a.tar.gz
+	4.将myhome.tar.gz 解压到/opt/tmp2目录下
+	tar -zxvf myhome.tar.gz -C /opt/temp2
+	
+	
+
+
+
+

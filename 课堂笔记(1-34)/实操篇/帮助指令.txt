@@ -1,0 +1,8 @@
+man:帮助指令
+例子：查看ls命令的使用方法
+man ls
+
+help：
+help ls:
+
+当一个指定不熟悉；使用man 和help

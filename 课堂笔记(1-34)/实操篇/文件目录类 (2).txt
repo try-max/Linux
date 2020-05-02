@@ -1,0 +1,57 @@
+rm指令 
+
+rm指令移除文件或语法
+
+-r :递归删除整个文件夹
+-f :强制删除不提示
+
+实例：1.将/home/aaa.txt 删除
+             rm aaa.txt
+          2.将bbb目录删除
+             rm -rf bbb/
+
+
+mv 指令  ：移动文件与目录或重命名文件
+              1.mv oldNameFile newNameFile        重命名
+              2.mv /temp/m ovefile /targetFolder   移动文件
+
+案例  1.将aaa.txt 改名为 pig.txt
+       mv aaa.txt pig.txt
+          2.将/home/pig.txt 文件 移动到 /root 目录下
+        mv pig.txt /root/
+
+
+cat 指令  查看文件内容只读，不能改
+cat [选项] 要查看的文件
+-n:显示行号
+  | more  一页一页显示
+案例：1.查看/etc/profile 文件内容 ，并显示行号。
+           cat -n /etc/profile  | more 
+
+more指令 ：基于vi编辑器的文本过滤器，它以全屏幕的方式按页显示文本文件的内容
+
+more快捷键：空格    下一页
+                     Enter    下翻一行
+                     q          代表立刻离开more，不再显示该文件内容 
+	      Ctrl+F    向下滚动一层
+                     Ctrl+B    返回上一屏幕
+                      =           输出当前行的行号
+                      :f           输出文件名和当前行的行号
+
+less :查看文件  与more相比：不是将整个文件全部加载，而是根据显示需要加载内容。对大型文件有较高的效率
+
+案例：打开  aaa.txt
+           less aaa.txt
+
+快捷键    空格     向下翻动一页
+           【pagedown】  向下翻动一页
+             【pageup】     向下翻动一页
+ 	/字串              向下搜寻字串的功能  n:向下查找  N:向上查找
+               ？字串            向上搜寻字串的功能  n:向下查找  N:向上查找
+	q                     离开less这个程序
+
+
+
+
+            
+  

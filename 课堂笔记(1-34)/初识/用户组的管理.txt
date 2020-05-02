@@ -1,0 +1,29 @@
+类似角色，系统可以对有共性的多个用户进行统一管理
+
+1.增加组
+ groupadd 组名
+
+实例：
+ groupadd wudang //创建一个组
+
+2.删除组
+
+ groupdel wudang
+
+3.创建用户指定组
+ 
+实例：增加用户zwj，直接将他指定到wudang
+
+groupadd wudang
+
+useradd -g wudang zwj
+
+4.修改用户的组
+
+usermod -g 用户组 用户名
+
+实例：将zwj修改到，shaolin组
+usermod -g shaolin zwj
+
+
+
